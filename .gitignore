@@ -1,0 +1,17 @@
+# Build output — never committed
+/build/
+
+# Compiled binaries / objects
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+app
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
