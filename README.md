@@ -24,16 +24,27 @@ myproject/
 - A C++20 compiler
 - GoogleTest (`brew install googletest` on macOS)
 
-## Build & test
+## Quick start (Makefile shortcuts)
+
+```sh
+make build    # compile the library, app, and tests
+make test     # build, then run all tests
+make run      # build, then run the demo app
+make clean    # delete the build/ directory
+make rebuild  # clean + build from scratch
+make help     # list all targets
+```
+
+Each target builds first if needed, so `make test` and `make run` work from a
+clean checkout with no extra steps.
+
+## Build & test (raw commands)
+
+The Makefile just wraps these:
 
 ```sh
 cmake -S . -B build
 cmake --build build
 ctest --test-dir build --output-on-failure
-```
-
-## Run the app
-
-```sh
 ./build/myproject_app
 ```
